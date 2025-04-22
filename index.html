@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My AWS Hosted Website</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-color: #f9fafb;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--secondary-color);
+            color: white;
+            margin-top: auto;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My AWS Hosted Website</h1>
+        <p>Hosted on S3 with CloudFront CDN</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>About This Website</h2>
+            <p>This is a simple static website hosted on AWS S3 and delivered globally via CloudFront CDN. The entire site consists of just this single HTML file with built-in CSS styling.</p>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Cost Effective</h3>
+                    <p>Hosting this website costs virtually nothing thanks to AWS Free Tier.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>High Performance</h3>
+                    <p>CloudFront CDN ensures fast loading times worldwide.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Secure</h3>
+                    <p>HTTPS encryption and restricted S3 access keep your content safe.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Get Started</h2>
+            <p>You can use this template to create your own static website on AWS.</p>
+            <a href="#" class="cta-button">Learn More</a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 My AWS Website. All rights reserved.</p>
+        <p>Hosted on Amazon Web Services</p>
+    </footer>
+</body>
+</html>
